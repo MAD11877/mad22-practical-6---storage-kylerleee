@@ -34,8 +34,8 @@ public class LoginPage extends AppCompatActivity {
                 reference.child("mad").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String checkPassword = snapshot.child("password").getValue(String.class);
-                        String checkName = snapshot.child("username").getValue(String.class);
+                        String checkPassword = snapshot.child("password").getValue().toString();
+                        String checkName = snapshot.child("username").getValue().toString();
                         if (checkPassword.equals(Ipassword) && checkName.equals(Iname)) {
                             Intent Login_to_List = new Intent(LoginPage.this, ListActivity.class);
                             startActivity(Login_to_List);
