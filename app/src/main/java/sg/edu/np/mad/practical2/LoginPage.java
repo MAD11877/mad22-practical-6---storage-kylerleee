@@ -21,7 +21,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        FirebaseDatabase db = FirebaseDatabase.getInstance("https://week6practical-77851-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        FirebaseDatabase db = FirebaseDatabase.getInstance("https://mad-week-6-3e98f-default-rtdb.asia-southeast1.firebasedatabase.app/");
         DatabaseReference reference = db.getReference("Users");
         EditText Password = findViewById(R.id.EditPassword);
         EditText Name = findViewById(R.id.EditUsername);
